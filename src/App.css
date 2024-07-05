@@ -1,0 +1,44 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.sticky-note {
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  background-color: #fff;
+  background-image: linear-gradient(to bottom, #fff 29px, #add8e6 30px);
+  background-size: 100% 30px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.sticky-note::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, transparent 29px, #add8e6 30px);
+  background-size: 100% 30px;
+  z-index: 1;
+}
+
+.sticky-note-content {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  z-index: 2;
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 30px;
+  outline: none;
+  resize: none;
+}
