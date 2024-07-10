@@ -1,9 +1,7 @@
 .App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
+  overflow: hidden;
 }
 
 .sticky-note {
@@ -15,7 +13,7 @@
   background-size: 100% 30px;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  position: relative;
+  position: absolute;
 }
 
 .sticky-note::before {
@@ -41,4 +39,10 @@
   line-height: 30px;
   outline: none;
   resize: none;
+}
+
+textarea {
+  font-size: 1.5rem;
+  line-height: 0.2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
